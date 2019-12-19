@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+width:100vw;
+height: 100vh;
+background-color:#3138ac;
+
+
+}
+/*///FONTS///*/
+.fontOswald{
+    font-family: 'Oswald', sans-serif;
+}
+
+.fontGaramond{
+    font-family: 'EB Garamond', serif;
+}
+
+
+
+main{
+    color: white;
+    font-family: 'EB Garamond', serif;
+   }
+main p {
+    font-size: 15px;
+}
+
+
+.allLink{
+    color: white;
+    text-decoration: none;
+}
+    
+}
+.noList{
+    list-style: none;
+}
+.img1{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.img2{
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+}
+
+
+.nav-elements-container ul{
+    display: flex;
+        }
+
+.nav-elements-container ul li {
+list-style: none;
+font-family: 'Oswald', sans-serif;
+padding-right: 10px;
+
+}
+.logo{
+    font-size: .8em;
+    font-family: 'Oswald', sans-serif;
+    padding-left: 5px;
+
+}
+
+#contact-info{
+    font-size:12px;
+}
+
+.nav-elements-container{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color:black;
+  color: white;
+  justify-content: flex-start;
+  border-radius:10px;
+  
+}
+
+.nav-links li:first-of-type{
+    padding-left: 50px;
+    
+}
+.nav-links li{
+margin: 0 auto;
+}
+
+.portfolio{
+    margin-top: 50px;
+    margin: 0 auto;
+   
+      
+}
+#portfolio h3{
+    margin-top: 20px;
+}
+
+.port1{
+    border: 2px black solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 2px white;
+    width: 200px;
+    background-color:#02015c;
+    padding: 0 5px 2px 5px;
+}
+footer{
+    background-color: black;
+    color: white;
+    font-size: 10px;
+}
+
+@media screen and (min-width: 480px){
+.nav-elements-container ul li {
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+    padding-left: 100px;
+    font-size:larger;
+    }
+}
+
+@media screen and (min-width: 760px){
+    main p, body p{
+        font-size: 20px;
+    }
+
+    .img1{
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+    }
+    
+    .img2{
+        width: 150px;
+        height: 150px;
+        margin-top: 5px;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px){
+    .nav-elements-container ul li {
+        list-style: none;
+        font-family: 'Oswald', sans-serif;
+        padding-left: 200px;
+        font-size:25px;
+    }
+
+    .logo{
+        font-size: 25px;
+        font-family: 'Oswald', sans-serif;
+        padding-left: 5px;
+        
+    
+    }
+}    
