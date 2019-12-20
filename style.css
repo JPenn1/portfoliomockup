@@ -1,167 +1,135 @@
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+	margin: 0;
+	padding: 0;
+	font-family:sans-serif;
+	vertical-align: baseline;
 }
-body{
-width:100vw;
-height: 100vh;
-background-color:#3138ac;
-
-
-}
-/*///FONTS///*/
-.fontOswald{
-    font-family: 'Oswald', sans-serif;
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
-.fontGaramond{
-    font-family: 'EB Garamond', serif;
-}
+html {
+		box-sizing: border-box;
+	}
+
+	body {
+		background-color: lightgray;
+		background-size: auto, 100% 100%;
+		font-family: sans-serif;
+		font-weight: 300;
+		color: #777777;
+		font-size: 20pt;
+		line-height: 1.75em;
+	}
 
 
+/* wrapper | white space */
 
-main{
-    color: white;
-    font-family: 'EB Garamond', serif;
-   }
-main p {
-    font-size: 15px;
-}
-
-
-.allLink{
-    color: white;
-    text-decoration: none;
-}
-    
-}
-.noList{
-    list-style: none;
-}
-.img1{
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-.img2{
-    width: 100px;
-    height: 100px;
-    margin-top: 5px;
+#wrapper {
+	width: 45em;
+	margin: 0 auto;
+	min-height: 100vh;
+	max-width: 100%;
+	padding: 4em 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
 }
 
 
-.nav-elements-container ul{
-    display: flex;
+
+
+/* navigation */
+
+	#nav {
+		text-align: center;
+		height: 4.25em;
+		cursor: default;
+		width: 45em;
+		color: black;
+		border: 2px black solid;
+		background-color: gray;
+		
+	}
+
+/* hero / landing page */
+
+	#main {
+        position: relative;
+        display:flex;		
+		width: 100%;
+		background-color: lightgray;
+        border: 2px black solid; 
+        
+		
+	}
+
+		#main > .panel1 {
+			
+			margin-bottom: 0;
+			position: relative;
+			padding: 5em 3em 5em 3em;
+			width: 50%;
+			height:100%;
+        }
+        
+        #main > .panel2 {
+            margin-bottom: 0;
+			position: relative;
+			padding: 5em 3em 5em 3em;
+			width: 50%;
+            height:100%;
+            border: 2px dashed black;
+            background: darkgrey;
+           
         }
 
-.nav-elements-container ul li {
-list-style: none;
-font-family: 'Oswald', sans-serif;
-padding-right: 10px;
+			
 
+/* Footer */
+
+	#footer {
+		text-align: center;
+		background-color: darkgray;
+		border: 2px solid black;
+        height:40px;
+        width: 45em;
+	}
+		#footer .copyright {
+			list-style: none;
+			padding-left: 0;
+		}
+
+			#footer .copyright li {
+				display: inline-block;
+			}	
+				
+
+/* Media Queries */
+
+@media screen and (max-width: 1280px) {
+
+	body {
+		font-size: 14pt;
+		}
+		
 }
-.logo{
-    font-size: .8em;
-    font-family: 'Oswald', sans-serif;
-    padding-left: 5px;
-
+		
+@media screen and (max-width: 730px) {
+		
+	body  {
+			font-size: 12pt;
+		}
+		
 }
-
-#contact-info{
-    font-size:12px;
+		
+@media screen and (max-width: 360px) {
+		
+	body {
+		font-size: 11pt;
+		}
+		
 }
-
-.nav-elements-container{
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  background-color:black;
-  color: white;
-  justify-content: flex-start;
-  border-radius:10px;
-  
-}
-
-.nav-links li:first-of-type{
-    padding-left: 50px;
-    
-}
-.nav-links li{
-margin: 0 auto;
-}
-
-.portfolio{
-    margin-top: 50px;
-    margin: 0 auto;
-   
-      
-}
-#portfolio h3{
-    margin-top: 20px;
-}
-
-.port1{
-    border: 2px black solid;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px 2px white;
-    width: 200px;
-    background-color:#02015c;
-    padding: 0 5px 2px 5px;
-}
-footer{
-    background-color: black;
-    color: white;
-    font-size: 10px;
-}
-
-@media screen and (min-width: 480px){
-.nav-elements-container ul li {
-    list-style: none;
-    font-family: 'Oswald', sans-serif;
-    padding-left: 100px;
-    font-size:larger;
-    }
-}
-
-@media screen and (min-width: 760px){
-    main p, body p{
-        font-size: 20px;
-    }
-
-    .img1{
-        width: 150px;
-        height: 150px;
-        margin-top: 20px;
-    }
-    
-    .img2{
-        width: 150px;
-        height: 150px;
-        margin-top: 5px;
-    }
-
-}
-
-
-@media screen and (min-width: 1200px){
-    .nav-elements-container ul li {
-        list-style: none;
-        font-family: 'Oswald', sans-serif;
-        padding-left: 200px;
-        font-size:25px;
-    }
-
-    .logo{
-        font-size: 25px;
-        font-family: 'Oswald', sans-serif;
-        padding-left: 5px;
-        
-    
-    }
-}    
