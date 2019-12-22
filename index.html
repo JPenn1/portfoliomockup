@@ -1,53 +1,158 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>My Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="style.css" />
-		
-	</head>
-	<body class="is-preload">
+<head>
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-		<!-- WRAPPER / WHITE SPACE-->
-			<div id="wrapper">
-				white space wrapped around
+  <!-- nav-->
+   <header>
+   	  <div class="container">
+   	  	   <div class="trigger-main">
+   	  	  	 <a href="javascript:void(0);" class="ham-burger">
+   	  	  	 	 <span></span>
+   	  	  	 	 <span></span>
+   	  	  	 </a>
+   	  	  </div>
+   	  	  <div class="navbar">
+   	  	  	  <ul>
+   	  	  	  	  <li><a href="#home" class="active">Home</a></li>
+   	  	  	  	  <li><a href="#about">About</a></li>
+   	  	  	  	  <li><a href="#portfolio">Portfolio</a></li>
+   	  	  	  	  <li><a href="#contact">Contact</a></li>
+   	  	  	  </ul>
+   	  	  </div>
+   	  </div>
+   </header>
+ 
 
-				<!-- NAVIGATION -->
-					<nav id="nav">
-						<center><b>NAV</b></center>
-						<center>Home(Landing page/Bio) | Projects | Contact | Github</center>
+  <!-- landing page (default/home) -->
+    <section class="home" id="home">
+       <div class="container">
+       	   <div class="home-text">
+       	   	     <h1>Jonathon Pennington</h1>
+       	   	     <h3>Full-Stack Developer</h3>
+       	   </div>
+       </div>
+    </section>
+  
+ 
+  <!-- about me -->
+    <section class="about" id="about">
+       <div class="container">
+       	  <h2 class="title">About Me</h2>
+       	  <div class="about-content">
+       	  	  <div class="img">
+       	  	  	 <img src="images/profilepic.jpg" alt="me">
+       	  	  </div>
+       	  	  <div class="description">
+       	  	  	  <h4>Jonathon Pennington</h4>
+       	  	  	  <h5>Full-Stack Developer based in Round Rock TX</h5>
+       	  	  	  <p>I am currently a student in the Full-Stack Development Program at Thinkful. I love the workmanship behind coding and web development. I find enlightment in the systematic logic within the syntax of coding frameworks and look forward to giving life to static web apps.</p>
+       	  	  	  <p>On my leisure time, I am an all inclusive tech/gadget/gaming enthusiast, and love to explore both the 2D & AR/VR landscape. I am also passionate about sustainability and often find myself YouTube deep-diving into urban agriculture hobby projects.</p>
+						 <section id="skills" class="icon-up">
+							<span class="fa fa-html5" aria-hidden="true"></span> | 
+							<span class="fa fa-css3" aria-hidden="true"></span> |
+							<span><b> Javascript </b></span>|
+							<span> <b>Jquery</b></span>
+					   </section>
+       	  	  </div>
+       	  </div>
+       </div>
+    </section>
+  
 
-					</nav>
+ <!-- projects / portfolio -->
+    <section class="portfolio" id="portfolio">
+    	<div class="container">
+    		 <h2 class="title">Portfolio</h2>
 
-				<!-- HERO / LANDING PAGE -->
-					<div id="main">
+    		 <div class="portfolio-content">
+    		 	  <div class="card">
+    		 	  	  <div class="box">
+    		 	  	  	  <h3>Obscure Movie Trivia</h3>
+							   <h4><a href="https://github.com/JPenn1/appSubmission">Github |</a> <a href="https://jpenn1.github.io/appSubmission"> DEMO</a></h4>
+							   <img src="images/portitem1.JPG" alt="portfolio"/>
+							   <p>Test your Movie Trivia knowledge with this App created utlizing Jquery, HTML, & CSS</p>
+    		 	  	  </div>
+    		 	  </div>
+    		 	  <div class="card">
+    		 	  	  <div class="box">
+    		 	  	  	  <h3>Item two</h3>
+							   <h4>Github | DEMO  </h4>
+    		 	  	  	  <img src="images/stockphoto.jpg" alt="portfolio"/>
+    		 	  	  </div>
+    		 	  </div>
+    		 	  <div class="card">
+    		 	  	  <div class="box">
+    		 	  	  	  <h3>Item three</h3>
+    		 	  	  	  <h4>Github | DEMO</h4>
+    		 	  	  	  <img src="images/stockphoto.jpg" alt="portfolio"/>
+    		 	  	  </div>
+    		 	  </div>
+    		 	  <
+    		 </div>
+    	</div>
+    </section>
 
-						<!-- BIO / PICTURE -->
-							<article id="home" class="panel1">
-								<header>
-								<center><h1>HERO/bio/landing</h1></center>
-								</header>							
-                            </article>
-                            <article id="home" class="panel2">
-								<header>
-								<center><h1>HERO/picture</h1></center>
-								</header>							
-                            </article>
-                        </div>            
+ <!-- contact form -->
+   <section class="contact" id="contact">
+   	 <div class="container">
+   	 	  <h2 class="title">Let's Chat</h2>
+   	 	  <div class="contact-content">
+   	 	  	  <form action="mailto:jpenni3@outlook.com" method="post" enctype="text/plain">
+   	 	  	  	 <input type="text" placeholder="Name" required/>
+   	 	  	  	 <input type="text" placeholder="Email" required/>
+   	 	  	  	 <input type="text" placeholder="Subject" required/>
+   	 	  	  	 <textarea placeholder="Message" required></textarea>
+   	 	  	  	 <input type= "submit" value="Send Message"/>
+   	 	  	  </form>
+   	 	  </div>
+   	 </div>
+   </section>
+  
+ <!-- footer / links -->
+   <footer>
+   	  <div class="container">
+   	  	  <div class="footer-content">
+   	  	  	  <div class="box">
+   	  	  	  	  <div class="icon">
+   	  	  	  	  	 <span class="fa fa-linkedin"></span>
+   	  	  	  	  </div>
+   	  	  	  	  <a href="https://www.linkedin.com/in/jonathon-pennington"><h4><b>LinkedIn</b></h4></a>
+   	  	  	  	  
+   	  	  	  </div>
+   	  	  	  <div class="box">
+   	  	  	  	  <div class="icon">
+   	  	  	  	  	 <span class="fa fa-envelope"></span>
+   	  	  	  	  </div>
+   	  	  	  	  <h4><b>EMAIL</b></h4>
+   	  	  	  	  <p>jpenni3@outlook.com</p>
+   	  	  	  </div>
+   	  	  	  <div class="box">
+   	  	  	  	  <div class="icon">
+   	  	  	  	  	 <span class="fa fa-twitter"></span>
+   	  	  	  	  </div>
+					<a href="https://twitter.com/Awesomish_Prime"><h4><b>TWITTER</b></h4></a>
+				    	  
+   	  	  	  </div>
+			</div>
+   	  </div>
+   </footer>
 
-				
-							
-				<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-							<li>&copy; footer</li>
-						</ul>
-					</div>
 
-			
+<!--jquery link-->
 
-		
-	</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
+
+
+
+
