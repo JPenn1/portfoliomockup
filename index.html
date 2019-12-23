@@ -74,7 +74,7 @@
     		 	  <div class="card">
     		 	  	  <div class="box">
     		 	  	  	  <h3>Obscure Movie Trivia</h3>
-							   <h4><a href="https://github.com/JPenn1/appSubmission">Github |</a> <a href="https://jpenn1.github.io/appSubmission"> DEMO</a></h4>
+							   <h4><a href="https://github.com/JPenn1/appSubmission" class="link-orange">Github |</a> <a href="https://jpenn1.github.io/appSubmission" class="link-orange"> DEMO</a></h4>
 							   <img src="images/portitem1.JPG" alt="portfolio"/>
 							   <p>Test your Movie Trivia knowledge with this App created utlizing Jquery, HTML, & CSS</p>
     		 	  	  </div>
@@ -98,17 +98,29 @@
     	</div>
     </section>
 
- <!-- contact form -->
+ <!-- contact form / email action supported by formspree.io-->
    <section class="contact" id="contact">
    	 <div class="container">
    	 	  <h2 class="title">Let's Chat</h2>
    	 	  <div class="contact-content">
-   	 	  	  <form action="mailto:jpenni3@outlook.com" method="post" enctype="text/plain">
-   	 	  	  	 <input type="text" placeholder="Name" required/>
-   	 	  	  	 <input type="text" placeholder="Email" required/>
-   	 	  	  	 <input type="text" placeholder="Subject" required/>
-   	 	  	  	 <textarea placeholder="Message" required></textarea>
-   	 	  	  	 <input type= "submit" value="Send Message"/>
+   	 	  	  <form action="https://formspree.io/mjvgworl"
+					method="POST">
+				<label>
+					<input name="name" type="text"  class="name" placeholder="Your Name" required/>
+				</label>
+				<label>
+					<input name ="email" type="text" class="email" placeholder="Your Email" required/>
+				</label> 
+				<label>
+				<input name ="subject" type="text" class="subject" placeholder="Subject" required/>
+				</label> 
+				<label>
+					<input textarea class="message" placeholder="Message"> </input textarea>
+				</label>	
+				<div class="status">
+
+				</div>	 
+   	 	  	  	 <button type= "submit" class="submit">SEND MESSAGE</button>
    	 	  	  </form>
    	 	  </div>
    	 </div>
@@ -129,9 +141,8 @@
    	  	  	  	  <div class="icon">
    	  	  	  	  	 <span class="fa fa-envelope"></span>
    	  	  	  	  </div>
-   	  	  	  	  <h4><b>EMAIL</b></h4>
-   	  	  	  	  <p>jpenni3@outlook.com</p>
-   	  	  	  </div>
+   	  	  	  	  <h4><b><a href="mailto:jpenni3@outlook.com" class="link-white">EMAIL</a></b></h4>
+   	  	  	  	  </div>
    	  	  	  <div class="box">
    	  	  	  	  <div class="icon">
    	  	  	  	  	 <span class="fa fa-twitter"></span>
