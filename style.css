@@ -1,135 +1,505 @@
 
+/* Raleway google font import */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700&display=swap');
+
+
 *{
-	margin: 0;
-	padding: 0;
-	font-family:sans-serif;
-	vertical-align: baseline;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
 }
 
-html {
-		box-sizing: border-box;
+/* snaps instead of scroll*/
+
+html{
+	scroll-behavior: smooth;
+
+}
+/*added a11y media query for scrolling preference*/
+@media (prefers-reduced-motion: reduce) {
+	html {
+	  scroll-behavior: auto;
 	}
-
-	body {
-		background-color: lightgray;
-		background-size: auto, 100% 100%;
-		font-family: sans-serif;
-		font-weight: 300;
-		color: #777777;
-		font-size: 20pt;
-		line-height: 1.75em;
-	}
-
-
-/* wrapper | white space */
-
-#wrapper {
-	width: 45em;
-	margin: 0 auto;
-	min-height: 100vh;
-	max-width: 100%;
-	padding: 4em 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  }
+body{
+	font-family: 'Raleway', sans-serif;
+	margin:0;
 	
 }
 
-
-
-
-/* navigation */
-
-	#nav {
-		text-align: center;
-		height: 4.25em;
-		cursor: default;
-		width: 45em;
-		color: black;
-		border: 2px black solid;
-		background-color: gray;
-		
-	}
-
-/* hero / landing page */
-
-	#main {
-        position: relative;
-        display:flex;		
-		width: 100%;
-		background-color: lightgray;
-        border: 2px black solid; 
-        
-		
-	}
-
-		#main > .panel1 {
-			
-			margin-bottom: 0;
-			position: relative;
-			padding: 5em 3em 5em 3em;
-			width: 50%;
-			height:100%;
-        }
-        
-        #main > .panel2 {
-            margin-bottom: 0;
-			position: relative;
-			padding: 5em 3em 5em 3em;
-			width: 50%;
-            height:100%;
-            border: 2px dashed black;
-            background: darkgrey;
-           
-        }
-
-			
-
-/* Footer */
-
-	#footer {
-		text-align: center;
-		background-color: darkgray;
-		border: 2px solid black;
-        height:40px;
-        width: 45em;
-	}
-		#footer .copyright {
-			list-style: none;
-			padding-left: 0;
-		}
-
-			#footer .copyright li {
-				display: inline-block;
-			}	
-				
-
-/* Media Queries */
-
-@media screen and (max-width: 1280px) {
-
-	body {
-		font-size: 14pt;
-		}
-		
+.container{
+	max-width: 1170px;
+	margin:auto;
 }
-		
-@media screen and (max-width: 730px) {
-		
-	body  {
-			font-size: 12pt;
-		}
-		
+header{
+	position: absolute;
+	width:100%;
+	left:0;
+	top:0;
+	padding:10px 15px;
+	z-index:100;
 }
-		
-@media screen and (max-width: 360px) {
-		
-	body {
-		font-size: 11pt;
-		}
-		
+header.sticky{
+	position: fixed;
+	background-color: #222222;
+	animation: header .5s ease;
+}
+
+header .navbar{
+	float: right;
+}
+header .navbar ul{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+header .navbar ul li{
+	display: inline;
+	padding:0 15px;
+}
+header .navbar ul li a{
+	display: inline-block;
+	padding:10px 0px;
+	font-size: 16px bold;
+	text-transform: uppercase;
+	color:orange;
+	position: relative;
+}
+header .navbar ul li a::before{
+	content:'';
+	position: absolute;
+	top:100%;
+	margin-top:-5px;
+   height: 2px;
+   left:0px;
+   background-color: white;
+  width:0;
+  transition:width .5s ease;
+}
+header .navbar ul li a.active::before{
+	width:100%;
+}
+header .navbar ul li a:hover::before{
+	width: 100%;
+}
+.home{
+	min-height: 100vh;
+	background-image: url("images/programming-code-abstract-technology-background-software-1024x756.jpg");
+	background-size: cover;
+	background-position: center;
+	float: left;
+	width: 100%;
+	padding:0px 15px;
+	position: relative;
+}
+
+.home::before{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	background-color: #000000;
+	opacity: 0.7;
+}
+
+.home .home-text{
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	left: auto;
+	z-index: 10;
+}
+
+.home .home-text h1{
+	font-size:35px;
+	color:white;
+	margin:10px 0px;
+	font-weight:400;
+	animation: slideLeft 1.5s ease;
+}
+.home .home-text h3{
+	font-size:60px;
+	color:orange;
+	margin:15px 0px 0px;
+	font-weight:700;
+	animation: slideRight 1.5s ease;
+}
+
+@keyframes slideLeft{
+	0%{transform: translateX(-100%);opacity:0}
+	100%{transform: translateX(0);opacity:1}
+}
+@keyframes slideRight{
+	0%{transform: translateX(100%);opacity:0}
+	100%{transform: translateX(0);opacity:1}
+}
+
+
+/*about me */
+
+.about{
+	float: left;
+	width: 100%;
+	padding:80px 0px; 
+	background-color:#353535;
+}
+
+h2.title{
+  font-size:30px;
+  font-weight: 600;
+  margin:0;
+  padding-bottom:70px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  letter-spacing:.5px;
+}
+h2.title::before{
+	content: '';
+	position: absolute;
+	width:80px;
+	height: 2px;
+    left: 50%;
+    margin-left:-40px;
+    top:50px;
+    background-color: black;
+}
+
+.about .about-content{
+	width: 100%;
+	float: left;
+}
+
+.about .about-content .img{
+	float: left;
+	width: 35%;
+	padding:15px;
+}
+.about .about-content .img img{
+	width: 100%;
+	border:10px solid #3c3c3c;
+}
+.about .about-content .description{
+	float: left;
+	width: 65%;
+	padding:15px;
+}
+.about .about-content .description h4{
+	font-size:20px;
+	color: white;
+	margin:0;
+	padding-bottom:10px;
+	font-weight: 400;
+}
+.about .about-content .description h5{
+	font-size:25px;
+	color: white;
+	margin:0;
+	padding-bottom:10px;
+	font-weight: 600;
+}
+.about .about-content .description p{
+	color: white;
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing:.5px;
+	text-align: left;
+	font-weight: 500;
+}
+.about .about-content .description p button{
+	margin-right:10px;
+	margin-top:20px;
+}
+
+.icon-up{
+	font-size:24px;
+	color: white;
+
+
+}
+
+
+
+/*portfolio */
+
+
+.portfolio{
+	float: left;
+	width: 100%;
+	padding:80px 0px; 
+	background-color:#292929;
+}
+
+.portfolio .portfolio-content{
+	float: left;
+	width: 100%;
+}
+
+.portfolio .portfolio-content .card{
+	float:left;
+	width: 33.33%;
+	padding:15px;
+}
+
+.portfolio .portfolio-content .card .box{
+	background-color:black;
+	padding:15px;
+	position: relative;
+}
+.portfolio .portfolio-content .card .box::before{
+	content:'';
+	position: absolute;
+	left:0;
+	top:0px;
+	height: 3px;
+	width:0;
+	background-color: orange;
+	z-index:1;
+	transition: width .5s ease;
+}
+.portfolio .portfolio-content .card .box:hover::before{
+	width: 100%;
+}
+.portfolio .portfolio-content .card .box h3{
+	margin:0;
+	padding:15px 0 5px;
+	color:#ffffff;
+	font-size:20px;
+	font-weight: 600;
+	letter-spacing:.5px;
+}
+.portfolio .portfolio-content .card .box h4{
+	margin:0;
+	padding:5px 0px 25px;
+	color:orange;
+	font-size:16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing:.5px;
+}
+.portfolio .portfolio-content .card .box img{
+	width: 100%;
+	display:block;
+}
+.portfolio .portfolio-content .card .box p{
+color: white;
+}
+.link-orange{
+	color: orange;
+}
+
+/*contact form*/
+
+label, input, textarea{
+	display: block;
+}
+.contact{
+	float: left;
+	width: 100%;
+	padding:80px 15px; 
+	background-color:#353535;
+}
+
+.contact .contact-content{
+	margin:auto;
+	max-width:650px;
+}
+
+.contact .contact-content input,
+.contact .contact-content textarea{
+	height:50px;
+    border:none;
+    border-left:2px solid transparent;
+	padding:10px 15px;
+	color: white;
+	margin-bottom:30px;
+	font-size:16px;
+	letter-spacing:1px;
+	font-weight: 400;
+	display: block;
+	width: 100%;
+	background-color: black;
+	transition: border .5s ease;
+}
+.contact .contact-content input:focus,
+.contact .contact-content textarea:focus{
+	
+	background-color: orange;
+	
+}
+.contact .contact-content input textarea{
+
+}
+.contact .contact-content button{
+	display: block;
+	margin:auto;
+	background-color: orange;
+	border: 2px black solid;
+	color:black;
+	font-weight: 600;
+	width: 100%;
+	height:50px;
+}
+::placeholder{
+	color:white;
+}
+
+
+/*footer / social */
+
+footer{
+	float: left;
+	width: 100%;
+	background-color:#292929;
+	padding:50px 0px;
+}
+
+
+}
+footer .footer-content{
+	float:left;
+	width: 100%;
+
+}
+ .link-white{
+	color:white;
+}
+footer .footer-content .box{
+	width:33.33%;
+	float: left;
+	padding:15px;
+	text-align: center;
+}
+footer .footer-content .box .icon span{
+	color: orange;
+	font-size:30px;
+}
+footer .footer-content .box h4{
+	font-size:16px;
+	color:white;
+	margin:0;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding:20px 0 0px;
+}
+footer .footer-content .box p{
+   color: white;
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing:.5px;
+	
+	font-weight: 400;
+	padding:10px 0;
+	margin:0px;	
+}
+
+
+/* media queries*/
+
+/*tablet/laptop*/
+@media(max-width: 991px){
+	.trigger-main{
+		display: block;
+	}
+	header .container{
+		position: relative;
+	}
+    .container{
+    	max-width: 750px;
+    }
+    header{
+    	position: fixed;
+    	background-color: #222222;
+    }
+
+    header .navbar{
+    	position: fixed;
+    	top:0;
+    	right:0;
+    	bottom:0;
+    	width:180px;
+    	background-color: #222222;
+    	z-index:200;
+    	padding-top:80px;
+    	transform: translateX(100%);
+    	transition: transform .5s ease;
+    	
+    }
+    header .navbar.open{
+    	transform: translateX(0);
+    }
+    header .navbar ul li{
+    	display: block;
+    }
+}
+
+/*Tablet*/
+@media(max-width: 767px){
+
+.home .home-text h3{
+	font-size:40px;
+}
+.home .home-text{
+	left:0;
+	padding:0px 15px;
+}
+.about .about-content .img{
+	width: 100%;
+}
+.about .about-content .description{
+	width: 100%;
+}
+.portfolio .portfolio-content .card{
+	width: 50%;
+}
+}
+/*mobiles */
+@media(max-width: 500px){
+
+.portfolio .portfolio-content .card{
+	width:100%;
+}
+footer .footer-content .box{
+	width: 100%;
+}
+}
+
+/* tutor code help / transform /transition animate*/
+.trigger-main{
+	position: absolute;
+	top:15px;
+	right:0px;
+	display: none;
+}
+.trigger-main a{
+	display: inline-block;
+	position: relative;
+	z-index: 210;
+}
+.trigger-main a span{
+	display: block;
+	height: 2px;
+	width: 30px;
+	background-color: white;
+	margin-bottom:8px;
+	transition: transform .5s ease;
+	
+}
+.trigger-main a span:nth-child(1){
+   transform-origin: left top;
+}
+.trigger-main a span:nth-child(2){
+transform-origin: left bottom;
+}
+.trigger-main a.active span:nth-child(1){
+    
+	transform: rotate(45deg) translateY(-7px);
+}
+.trigger-main a.active span:nth-child(2){
+	
+	transform: rotate(-45deg) translateY(7px);
 }
