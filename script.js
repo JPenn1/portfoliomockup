@@ -10,7 +10,17 @@
      	else{
      	 $("header").removeClass("sticky")	
      	}
-     }
+	 }
+	 
+	 function navigationBar() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+		  x.className += " responsive";
+		} else {
+		  x.className = "topnav";
+		}
+	  }
+
 	 $('.submit').click(function(e){
 		 console.log('clicked button')
 		 
